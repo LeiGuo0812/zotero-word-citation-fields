@@ -57,7 +57,7 @@ def get_json(url: str) -> dict:
     req = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "Codex Zotero Word Citation Fields Skill/1.0 (crossref validation)",
+            "User-Agent": "Zotero Word Citation Fields Skill/1.0 (crossref validation)",
             "Accept": "application/json",
         },
     )

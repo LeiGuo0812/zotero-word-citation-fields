@@ -197,7 +197,7 @@ def new_instr_run(code: str, rpr: ET.Element | None) -> ET.Element:
 
 def build_field_code(token: str, item_keys: list[str], item_lookup: dict[str, dict], user_id: str) -> str:
     citation = {
-        "citationID": f"codex-{uuid.uuid4().hex[:8]}",
+        "citationID": f"generated-{uuid.uuid4().hex[:8]}",
         "properties": {
             "formattedCitation": token,
             "plainCitation": token,

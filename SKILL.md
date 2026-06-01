@@ -90,7 +90,7 @@ Use when the Zotero collection items have numeric `callNumber` values matching t
 ```bash
 python3 ~/.codex/skills/zotero-word-citation-fields/scripts/build_ref_map.py \
   --db ~/Zotero/zotero.sqlite \
-  --collection-name "CY-BN_MRI" \
+  --collection-name "ExampleCollection" \
   --out ref_map.json
 ```
 
@@ -101,9 +101,9 @@ Use when the manuscript uses author-year citations.
 ```bash
 python3 ~/.codex/skills/zotero-word-citation-fields/scripts/build_author_year_map.py \
   --db ~/Zotero/zotero.sqlite \
-  --collection-name "MyCollection" \
+  --collection-name "ExampleCollection" \
   --out author_year_map.json \
-  --unresolved-out author_year_ambiguities.json
+  --unresolved-out citation_map_review.json
 ```
 
 Review the unresolved report before insertion if there are ambiguous tokens.
@@ -145,8 +145,8 @@ Use when the user does not yet have the references in Zotero.
 ```bash
 python3 ~/.codex/skills/zotero-word-citation-fields/scripts/extract_references_to_ris.py \
   --docx manuscript.docx \
-  --out-ris manuscript_references.ris \
-  --out-report manuscript_references_validation.json
+  --out-ris references_import.ris \
+  --out-report references_validation.json
 ```
 
 If the reference heading is nonstandard:
@@ -155,8 +155,8 @@ If the reference heading is nonstandard:
 python3 ~/.codex/skills/zotero-word-citation-fields/scripts/extract_references_to_ris.py \
   --docx manuscript.docx \
   --heading "References" \
-  --out-ris manuscript_references.ris \
-  --out-report manuscript_references_validation.json
+  --out-ris references_import.ris \
+  --out-report references_validation.json
 ```
 
 ## Style handling
